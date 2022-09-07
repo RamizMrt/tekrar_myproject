@@ -34,7 +34,7 @@ Resources:
       ImageId: ami-05fa00d4c63e32376
       InstanceType: t2.micro
       KeyName: firstkey
-      SecurityGroups:
+      SecurityGroupIds:
         - Ref: WebServerSecGroup
       Tags:
         - Name: WebServer
