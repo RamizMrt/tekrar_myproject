@@ -25,9 +25,7 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
-      Tags:
-        - Name: Carausel
-          Value: CarauselSecGroup
+  
   WebServerEC2:
     Type: AWS::EC2::Instance
     Properties:
@@ -37,7 +35,7 @@ Resources:
       SecurityGroupIds:
         - Ref: WebServerSecGroup
       Tags:
-        - Name: WebServer
+        - Key: Name
           Value: CarauselWebServer
       UserData: 
         Fn::Base64:
